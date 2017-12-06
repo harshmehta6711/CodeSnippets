@@ -1,24 +1,20 @@
+import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class RectangleTest {
+public class TestRectangle {
 
-    @BeforeClass
-    public void setUp() {
-        // code that will be invoked when this test is instantiated
-        Rectangle objRect = new Rectangle();
-        int result[] = new int[2];
+    private Rectangle objRect;
+    private int[] result;
+
+    @BeforeMethod
+    public void setUp() throws Exception {
+        objRect= new Rectangle();
     }
 
-    @Test(groups = {"fast"})
-    public void aFastTest() {
+    @Test
+    public void testConstructRectangle() throws Exception {
         System.out.println("Fast test");
         result = objRect.constructRectangle(25);
-        System.out.println("Size of result: " + result.length())
+        System.out.println("Size of result: " + result);
     }
-
-    @Test(groups = {"slow"})
-    public void aSlowTest() {
-        System.out.println("Slow test");
-    }
-
 }

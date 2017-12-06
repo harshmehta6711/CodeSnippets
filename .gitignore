@@ -13,3 +13,5 @@ gen
 .idea/workspace.xml
 JavaCodeSnippets.iml
 out/
+
+src/*.class
